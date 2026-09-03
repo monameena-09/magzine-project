@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        main {
+            height: 100%;
+            width: 100%;
+            color: #B80906;
+            background-color: #FEE3C6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #section-1 {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            border: 2px solid #621910;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 9fr;
+            grid-template-areas: "header header"
+                "hero-left hero-right";
+        }
+
+        header {
+            grid-area: header;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 3px solid #621910;
+            padding: 5px 30px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        header .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #B80906;
+            font-weight: 600;
+            font-size: 16px;
+
+        }
+
+        header .search {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .hero-left {
+            grid-area: hero-left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px 30px;
+        }
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        .top .btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btns button {
+            color: #B80906;
+            background-color: #FEE3C6;
+            padding: 5px 15px;
+            border: 1px solid #B80906;
+            border-radius: 10px;
+        }
+
+        .top h1 {
+            font-size: 40px;
+            line-height: 45px;
+            font-weight: 800;
+        }
+
+        .top p {
+            font-size: 16px;
+            font-weight: 400;
+            width: 88%;
+        }
+
+        .top .read-btn {
+            padding: 10px 80px;
+            width: fit-content;
+            background-color: #B80906;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .botton {
+            display: flex;
+            gap: 10px;
+        }
+
+        .bottom i {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+
+        .bottom i:nth-child(1) {
+            opacity: 0.4;
+        }
+
+        .hero-right {
+            grid-area: hero-right;
+            padding: 30px;
+
+        }
+
+        .hero-right .img {
+            background-color: aqua;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: 100%;
+        }
+
+
+        #section-2 {
+            height: 100%;
+            width: 100%;
+            padding: 5px 30px;
+            border: 2px solid #621910;
+            background-color: #FEE3C6;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 4fr 4fr 1fr;
+            grid-template-areas:
+                "box box box box"
+                "box1 box1 box2 box3"
+                "box4 box5 box5 box6"
+                "bottom2 bottom2 bottom2 bottom2"
+            ;
+        }
+
+        .box {
+            grid-area: box;
+
+            border-radius: 10px;
+        }
+
+        .top-left-out {
+            height: 100%;
+            width: 100%;
+            background-image: url("https://images.unsplash.com/photo-1773332585754-f1436987743b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: 100%;
+            height: 80%;
+
+        }
+
+        .box1 {
+            grid-area: box1;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/1200x/b8/85/af/b885afc32b4a96c351939803633f2526.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .text {
+            overflow: hidden;
+            margin-top: 190px;
+            background-color: #FEE3C6;
+            padding: 5px 5px;
+
+        }
+
+
+        .box2 {
+            background-color: rgb(198, 34, 210);
+            grid-area: box2;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/736x/10/9d/f4/109df4768fad79063b4af41ea2b1c9e2.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90%;
+
+        }
+
+        .box3 {
+            background-color: rgb(39, 203, 105);
+            grid-area: box3;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/736x/1b/8f/f0/1b8ff0358a8ad6554b88a815faa415c0.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90%;
+
+        }
+
+        .box4 {
+            background-color: rgb(231, 23, 137);
+            grid-area: box4;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/1200x/ee/05/b8/ee05b89ca3b6d26e99e2a61d3d33a035.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90%;
+        }
+
+        .box5 {
+            background-color: rgb(137, 11, 95);
+            grid-area: box5;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/736x/98/85/42/9885428e5359500183c1e96542c70aca.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90%;
+
+        }
+
+        .box6 {
+            background-color: rgb(177, 220, 34);
+            grid-area: box6;
+            border-radius: 10px;
+            background-image: url("https://i.pinimg.com/736x/36/89/07/368907149e4e0470d0d524dd2edecef5.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90%;
+        }
+
+        .bottom2 {
+            grid-area: bottom2;
+            background-color: #621910;
+            border-radius: 40px;
+            text-align: center;
+            color: white;
+            font-weight: 300px;
+            padding: 10px;
+        }
+
+        #section-3 {
+            height: 100%;
+            width: 100%;
+
+            border: 2px solid #621910;
+            background-color: #FEE3C6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "section-3-top-left  section3-heading "
+                "section-3-top-left  track1"
+                "section-3-top-left  track2"
+                "section-3-top-left  track3"
+                "section-3-top-left  track4"
+                "section-3-top-left  track5";
+            gap: 5px;
+
+
+        }
+
+        .section3-heading {
+
+            grid-area: section3-heading;
+            display: flex;
+           
+            align-items: center;
+            font-size: 20px;
+
+        }
+
+        .section-3-top-left {
+            background-color: #FEE3C6;
+            grid-area: section-3-top-left;
+            border-right: 3px solid #621910;
+
+        }
+
+        #main-img {
+            height: 92%;
+            width: 92%;
+            margin: 20px 20px;
+            background-image: url("https://i.pinimg.com/736x/e8/4f/58/e84f58e3ef7ab00ae9a495f6bb31c6d1.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            justify-content: center;
+            align-self: center;
+
+        }
+       
+        .track1 {
+            border: 3px solid #B80906;
+            grid-area: track1;
+            padding: 5px;
+            margin: 2px;
+            margin-right: 10px;
+            border-radius: 10px;
+            
+        }
+        
+
+        .track2 {
+
+            border: 3px solid #B80906;
+            grid-area: track2;
+            padding: 5px;
+            margin: 2px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+
+        .track3 {
+            border: 3px solid #B80906;
+            grid-area: track3;
+            padding: 5px;
+            margin: 2px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+
+        .track4 {
+
+            grid-area: track4;
+            border: 3px solid #B80906;
+            padding: 5px;
+            margin: 2px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+
+        .track5 {
+
+            grid-area: track5;
+            border: 3px solid #B80906;
+            padding: 5px;
+            margin: 2px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+
+
+        #section-4 {
+            height: 60%;
+            width: 100%;
+            border: 2px solid #621910;
+            background-color: #FEE3C6;
+            gap: 10px;
+            padding: 10px 10px;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 2fr 8fr;
+            grid-template-areas:
+                " section4-heading section4-heading section4-heading section4-heading"
+                "card1 card2 card3 card4";
+
+        }
+
+        .section4-heading {
+
+            grid-area: section4-heading;
+
+        }
+
+        .section4-heading h1 {
+            font-weight: 800px;
+        }
+
+        .card1 {
+
+            grid-area: card1;
+            overflow: hidden;
+
+        }
+
+        .card1-img {
+            height: 100%;
+            width: 100%;
+            background-image: url("./a1118462452736a99b395354d8f1612d-removebg-preview.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 3px solid #B80906;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+        .card2 {
+
+            grid-area: card2;
+        }
+
+        .card2-img {
+            height: 100%;
+            width: 100%;
+            background-image: url("./33460506a608d941a2f7417ff559bf24-removebg-preview.png");
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 3px solid #B80906;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+        .card3 {
+
+            grid-area: card3;
+        }
+
+        .card3-img {
+            height: 100%;
+            width: 100%;
+            background-image: url("./51dc8afaaa2493262f0d142d420732df-removebg-preview.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 3px solid #B80906;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+        .card4 {
+            border: 3px solid #B80906;
+            border-radius: 10px;
+            grid-area: card4;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section-5 {
+            height: 40%;
+            width: 100%;
+            border: 2px solid #621910;
+            background-color: #FEE3C6;
+            gap: 10px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 9fr;
+            grid-template-areas:
+                "menu-heading menu-heading menu-heading menu-heading"
+                "menu1 menu2 menu3 menu4"
+                "menu-bottom menu-bottom menu-bottom menu-bottom"
+
+        }
+
+        .menu-heading {
+
+            grid-area: menu-heading;
+            border: 2px solid #B80906;
+            text-align: center;
+        }
+
+        .menu1 {
+            grid-area: menu1;
+            padding: 10px 10px;
+
+        }
+
+        .menu2 {
+            grid-area: menu2;
+            padding: 10px 10px;
+
+        }
+
+        .menu3 {
+            grid-area: menu3;
+
+            padding: 10px 10px;
+        }
+
+        .menu4 {
+            grid-area: menu4;
+
+            padding: 10px 10px;
+        }
+
+        .menu-bottom {
+            grid-area: menu-bottom;
+            border-color: cornsilk;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section id="section-1">
+            <header>
+                <h1>THE FACE</h1>
+                <div class="links">
+                    <a href="#">NEWS</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">MAGAZINE</a>
+                    <a href="#">SHOP</a>
+                </div>
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                    <h3>SEARCH</h3>
+                </div>
+            </header>
+            <div class="hero-left">
+                <div class="top">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+                    <h1>MASTER PEACE ON PILL COLLINS AND MAKING BLACK INDIE MUSIC</h1>
+                    <p>The British musician has carved out a riche making bangers that would make any indie sleaze fain
+                        punch the air.</p>
+                    <button class="read-btn">READ MORE</button>
+                </div>
+                <div class="bottom">
+                    <i class="ri-arrow-left-circle-line"></i>
+                    <i class="ri-arrow-right-circle-line"></i>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="img"></div>
+            </div>
+        </section>
+        <section id="section-2">
+            <div class="box">
+                <h1>LAST NEWS</h1>
+            </div>
+            <div class="box1">
+                <div id="box1-img">
+                </div>
+                <div class="text">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+
+                    <h4>FASHION NEWS OF THE WEEK: MADONNA
+                        DIOR AND HARMONY
+                    </h4>
+
+                </div>
+            </div>
+            <div class="box2">
+                <div id="box2-img">
+
+                </div>
+                <div class="text">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+
+                    <h4>FASHION NEWS OF THE WEEK:NEWS
+                    </h4>
+
+                </div>
+            </div>
+            <div class="box3">
+                <div id="box1-img">
+
+                </div>
+                <div class="text">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+
+                    <h4>
+                        THE BELL JAR BOOK DIOR AND
+                    </h4>
+
+                </div>
+            </div>
+            <div class="box4">
+                <div id="box1-img">
+
+                </div>
+                <div class="text">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+
+                    <h4>FASHION NEWS OF THE WEEK
+                    </h4>
+
+                </div>
+            </div>
+            <div class="box5">
+                <div id="box1-img">
+
+                </div>
+                <div class="text">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+
+                    <h4>FASHION NEWS OF THE WEEK: MADONNA
+                        DIOR AND HARMONY
+                    </h4>
+
+                </div>
+            </div>
+            <div class="box6">
+                <div id="box1-img">
+
+                </div>
+                <div class="text">
+                    <div class="btns">
+                        <button>MUSIC</button>
+                        <button>02.03.2023</button>
+                    </div>
+
+                    <h4> MADONNA
+                        DIOR AND HARMONY
+                    </h4>
+
+                </div>
+            </div>
+            <!--div class="bottom2">
+                <h2>SEE MORE</h2>
+            </div>-->
+        </section>
+        <section id="section-3">
+            <div class="section-3-top-left">
+                <div id="main-img">
+
+                </div>
+            </div>
+            <div class=" section3-heading">
+                <h1>TOP TRACKS OF THE DAY</h1>
+            </div>
+
+            <div class="track1">
+                <h4>DO IT AGAIN</h4>
+               
+              
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+
+            </div>
+            <div class="track2">
+                <h4>A LITTLE MORE TIME</h4>
+               
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+            </div>
+            <div class="track3">
+                <h4>HOLIDAY</h4>
+                
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+            </div>
+            <div class="track4">
+                <h4>GLUE SONG</h4>
+               
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+            </div>
+            <div class="track5">
+                <h4>NUN IN CHANGE</h4>
+                
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img width="50"
+                    height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" /><img
+                    width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/audio-wave--v1.png"
+                    alt="audio-wave--v1" /><img width="50" height="50"
+                    src="https://img.icons8.com/ios/50/audio-wave--v1.png" alt="audio-wave--v1" />
+            </div>
+
+        </section>
+        <section id="section-4">
+            <div class=" section4-heading">
+                <h1>TRENDING THIS WEEK</h1>
+            </div>
+
+            <div class="card1">
+                <div class="card1-img"></div>
+
+            </div>
+            <h5>OFF -SHOULDER CROP TOP</h5>
+            <div class="card2">
+                <div class="card2-img"></div>
+
+            </div>
+            <h5>BLACK CAT-EYE SUNGLASSES</h5>
+            <div class="card3">
+                <div class="card3-img"></div>
+            </div>
+            <div class="card4">
+                <h2>SEE ALL</h2>
+            </div>
+            <h5>NY BASEBALL CAP</h5>
+        </section>
+        <div id="section-5">
+            <div class="menu-heading">
+                <h1>THE FACE</h1>
+            </div>
+            <div class="menu1">
+                <h3>MENU</h3>
+                <p>NEWS</p>
+
+                <p>ABOUT</p>
+                <p>MAGAZINE</p>
+                <p>SHOP</p>
+            </div>
+            <div class="menu2">
+                <h3>INFORMATION</h3>
+                <p>TERMS & CONDITIONS</p>
+                <p>ARCHIVE</p>
+                <p>FUTURE ACADEMY</p>
+                <p>CAREERS</p>
+                <p>TERMS </p>
+            </div>
+            <div class="menu3">
+                <h3>NEWS</h3>
+                <p>STYLE</p>
+                <p>MUSIC</p>
+                <p>CULTURE</p>
+                <p>BEAUTY</p>
+                <p>LIFE</p>
+            </div>
+            <div class="menu4">
+                <h3>SUSCRIBE</h3>
+                <p>LOGIN</p>
+                <p>EMAIL</p>
+                __________________________________
+                <br>
+                <br>
+                <i class="fa-regular fa-circle-play"></i> <i class="fa-regular fa-circle-user"></i> <i
+                    class="fa-regular fa-circle-dot"></i>
+            </div>
+            <div class="menu-bottom"></div>
+        </div>
+    </main>
+</body>
+
+</html>
