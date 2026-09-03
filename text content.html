@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  #section-3 {
+            height: 100%;
+            width: 100%;
+            border: 3px solid #621910;
+            background-color: #FEE3C6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "section-3-top-left  section3-heading "
+                "section-3-top-left  track1"
+                "section-3-top-left  track2"
+                "section-3-top-left  track3"
+                "section-3-top-left  track4"
+                "section-3-top-left  track5";
+            gap: 5px;
+
+        }
+
+        .section3-heading {
+            background-color: chocolate;
+            grid-area: section3-heading;
+
+        }
+
+        .section-3-top-left {
+            background-color: burlywood;
+            grid-area: section-3-top-left;
+            border-right: 3px solid #621910;
+
+        }
+
+        .track1 {
+            background-color: crimson;
+            grid-area: track1;
+        }
+
+        .track2 {
+            background-color: rgb(201, 157, 166);
+            grid-area: track2;
+        }
+
+        .track3 {
+            background-color: rgb(105, 224, 84);
+            grid-area: track3;
+        }
+
+        .track4 {
+            background-color: rgb(234, 83, 163);
+            grid-area: track4;
+        }
+
+        .track5 {
+            background-color: crimson;
+            grid-area: track5;
+        }
+
+
+        #section-4 {
+            height: 50%;
+            width: 100%;
+            border: 3px solid #621910;
+            background-color: #FEE3C6;
+            gap: 5px;
+            padding: 5px;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 2fr 8fr;
+            grid-template-areas:
+                " section4-heading section4-heading section4-heading section4-heading"
+                "card1 card2 card3 card4";
+        }
+
+        .section4-heading {
+            background-color: aquamarine;
+            grid-area: section4-heading;
+        }
+
+        .card1 {
+            background-color: cadetblue;
+            grid-area: card1;
+        }
+
+        .card2 {
+            background-color: rgb(69, 30, 171);
+            grid-area: card2;
+        }
+
+        .card3 {
+            background-color: rgb(37, 218, 224);
+            grid-area: card3;
+        }
+
+        .card4 {
+            background-color: rgb(226, 19, 160);
+            grid-area: card4;
+        }   
+</body>
+</html>

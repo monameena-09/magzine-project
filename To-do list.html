@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    border:3px solid black;
+}
+</style>
+<body>
+    <main>
+        <div class="box"></div>
+        <button>clickk me to on</button>
+    </main>
+    <script>
+        let bulb=document.querySelector("div");
+        let btn=document.querySelector("button");
+     
+       /* btn.addEventListener("click",function(){
+            bulb.style.backgroundColor="yellow";
+            btn.textContent="this is oonnn"
+        })*/
+
+
+        let light=true
+        btn.addEventListener("click",function(){
+            if(light){
+                bulb.style.backgroundColor="pink";
+                btn.textContent="helooo i am light";
+                light=false;
+            }else{
+                bulb.style.backgroundColor="red";
+                btn.textContent="lettt gooooo"
+                light=true;
+            }
+        })
+          
+
+    </script>
+</body>
+</html>

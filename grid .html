@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        main {
+
+            height: 100%;
+            width: 100%;
+            gap: 10px;
+            padding: 20px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 13% 40% 47%;
+            grid-template-areas:
+                "box box box"
+                "box1 box1 box1"
+                "box2 box3 box4"
+
+            ;
+        }
+
+        .box {
+            background-color: darkorange;
+            grid-area: box;
+            display: flex;
+            justify-content: space-between;
+            width:100%;
+        }
+
+        .box1 {
+            background-color: aqua;
+            grid-area: box1;
+        }
+
+        .box2 {
+            background-color: blueviolet;
+            grid-area: box2;
+            border-radius: 20px;
+            background-image: url("https://i.pinimg.com/736x/e3/26/8e/e3268eed96eb428d56ea3c5db0fa8458.jpg");
+            background-position: 100%;
+            background-size: cover;
+        }
+
+        .box3 {
+            background-color: chartreuse;
+            grid-area: box3;
+            border-radius: 20px;
+        }
+
+        .box4 {
+            background-color: crimson;
+            grid-area: box4;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        
+        <div class="box">
+            <div>
+                <i class="ri-menu-2-line"></i>
+                <h2>Bright.</h2>
+        </div>
+
+            <div>
+                <input type="search" placeholder="Search">
+                <i class="ri-search-line"></i>
+            </div>
+            <div>
+                <i class="ri-notification-3-fill"></i>
+                <i class="ri-user-3-fill"></i>
+            </div>
+        </div>
+
+        <div class="box1">
+            <h3>September 12-22</h3>
+            <h1>Enjoy free home delivery in the summer.</h1>
+            <h3>Designer Dresses-Pick from trendy Designer Dress.</h3>
+        </div>
+        <div class="box2">
+
+            <h3>Start from $45.30</h3>
+            <i class="ri-heart-3-line"></i>
+            <h1>Women's Shoes</h1>
+        </div>
+        <div class="box3">
+            <h3>Start from $105.00</h3>
+            <i class="ri-heart-3-line"></i>
+            <h1>Cycle Accessories</h1>
+        </div>
+        <div class="box4">
+            <h3>Start from $35.00</h3>
+            <i class="ri-heart-3-line"></i>
+            <h1>Home Accessories</h1>
+        </div>
+
+
+
+
+    </main>
+</body>
+
+</html>

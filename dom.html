@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.main{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+    
+    .bulb{
+        height:300px;
+        width:300px;
+        border:2px solid black;
+        border-radius: 50%;
+    }
+    button{
+        background-color:rgb(209, 192, 209);
+        font-size: 20px;
+        border:3px solid black;
+        padding:10px 20px;
+        border-radius: 10px;
+    }
+    .lightUp{
+        background-color: greenyellow;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="bulb">
+
+    </div>
+    <input  value=me phle se hu type="name" placeholder="kuch likho">
+    <button>ON</button>
+</div>
+<script>
+    /*let bulb=document.querySelector(".bulb");
+    let btn=document.querySelector("button");
+
+    btn.addEventListener("click",function(){
+        bulb.style.backgroundColor="yellow";
+        btn.textContent="off";
+    })
+   let flag =true
+    btn.addEventListener("click", function(){
+
+  
+   if(flag){
+  
+    bulb.style.backgroundColor="yellow"
+    btn.textContent="off"
+     flag=false;
+   }else{
+    
+    bulb.style.backgroundColor="transparent"
+    btn.textContent="onn"
+    flag=true;
+   }
+   });
+   
+
+
+   let flag=true;
+   btn.addEventListener("click",function(){
+    if(flag){
+        bulb.style.backgroundColor="pink";
+        btn.textContent="heyyyyy"
+        flag=false;
+    }
+    
+    else{
+        bulb.style.backgroundColor="blue"
+        btn.textContent="helloooo";
+        flag=true;
+    }
+   })
+
+  btn.addEventListener("click",function(){
+    bulb.classList.toggle("lightUp");
+  });
+if(bulb.classList.toggle("lightUp")){
+    btn.textContent="off"
+}else{
+    btn.textContent="onn"
+};
+*/
+let inp=document.querySelector("input");
+let btn=document.querySelector("button");
+
+btn.addEventListener("click",function(){
+    console.log(inp.value);
+})
+
+</script>
+</body>
+</html>
